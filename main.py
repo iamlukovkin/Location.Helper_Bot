@@ -2,12 +2,9 @@ import telebot as tb
 from telebot import types
 import operations as op
 import windows_menu as menu
-from github import Github
 
-TOKEN = "6048732407:AAEGRA6prdW1ymtjLamIvn53_vDh_IyQ5yE"
+
 bot = tb.TeleBot(TOKEN)
-github_token = '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'
-g = Github(github_token)
 
 
 @bot.message_handler(commands=['start'])

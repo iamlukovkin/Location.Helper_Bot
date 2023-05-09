@@ -24,19 +24,7 @@ def new_doc(message):
 
 
 def load_doc(message):
-    user = message.context.args[0]
-    repo_name = message.context.args[1]
-    repo = g.get_repo(user + '/' + repo_name)
-    contents = repo.get_contents('')
-    file_list = []
-    for content_file in contents:
-        if content_file.type == 'dir':
-            sub_contents = repo.get_contents(content_file.path)
-            for sub_content_file in sub_contents:
-                file_list.append(sub_content_file.path)
-        else:
-            file_list.append(content_file.path)
-    message.context.bot.send_message(chat_id=message.update.effective_chat.id, text='\n'.join(file_list))
+    pass
 
 
 def pers_doc(message):
